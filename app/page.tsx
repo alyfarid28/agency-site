@@ -1,103 +1,99 @@
+"use client";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-black">
 
-      {/* NAVBAR */}
-      <header className="flex justify-between items-center px-10 py-6 border-b">
-        <h1 className="text-2xl font-extrabold">AgencyPro</h1>
+      {/* NAV */}
+      <header className="flex justify-between items-center px-10 py-6 border-b sticky top-0 bg-white/80 backdrop-blur">
+        <h1 className="text-2xl font-extrabold">AgencyX</h1>
 
-        <nav className="flex gap-6 text-sm text-gray-600">
-          <a href="#services" className="hover:text-black">Services</a>
-          <a href="#about" className="hover:text-black">About</a>
-          <a href="#pricing" className="hover:text-black">Pricing</a>
-          <a href="#contact" className="hover:text-black">Contact</a>
+        <nav className="hidden md:flex gap-8 text-sm text-gray-600">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#demo">Demo</a>
         </nav>
       </header>
 
       {/* HERO */}
-      <section className="text-center py-28 px-6 bg-gray-50">
-        <h2 className="text-5xl font-extrabold leading-tight">
-          We Build High-Converting Websites 🚀
-        </h2>
+      <section className="text-center py-32 px-6 bg-gradient-to-b from-gray-50 to-white">
+        <h1 className="text-6xl font-extrabold">
+          Premium Agency <span className="text-gray-500">Template</span> 🚀
+        </h1>
 
-        <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-          We help businesses grow with modern, fast and conversion-focused websites
-          designed to turn visitors into customers.
+        <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
+          A modern Next.js + Tailwind website template for agencies and startups.
+          Built to convert visitors into clients.
         </p>
 
-        <button className="mt-8 px-8 py-3 bg-black text-white rounded-full hover:scale-105 transition">
-          Get Started
-        </button>
-      </section>
+        <div className="mt-10 flex justify-center gap-4">
+          <a className="px-8 py-3 bg-black text-white rounded-full hover:scale-105 transition" href="#pricing">
+            Buy Now
+          </a>
 
-      {/* SERVICES */}
-      <section id="services" className="py-20 px-10">
-        <h3 className="text-3xl font-bold text-center mb-12">Our Services</h3>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="border p-6 rounded-xl">
-            <h4 className="font-bold text-xl">Web Design</h4>
-            <p className="text-gray-600 mt-2">Modern UI/UX designs that convert.</p>
-          </div>
-
-          <div className="border p-6 rounded-xl">
-            <h4 className="font-bold text-xl">Development</h4>
-            <p className="text-gray-600 mt-2">Fast, scalable Next.js websites.</p>
-          </div>
-
-          <div className="border p-6 rounded-xl">
-            <h4 className="font-bold text-xl">SEO Optimization</h4>
-            <p className="text-gray-600 mt-2">Rank higher and get more traffic.</p>
-          </div>
+          <a className="px-8 py-3 border rounded-full hover:scale-105 transition" href="#demo">
+            Live Demo
+          </a>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="about" className="py-20 px-10 bg-gray-50 text-center">
-        <h3 className="text-3xl font-bold">Why Choose Us?</h3>
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-          We are a performance-driven agency focused on delivering results,
-          not just beautiful websites.
-        </p>
+      {/* FEATURES */}
+      <section id="features" className="py-24 px-10">
+        <h2 className="text-4xl font-bold text-center mb-14">Features</h2>
+
+        <div className="grid md:grid-cols-3 gap-6 text-center">
+          <div className="p-6 border rounded-xl">⚡ Fast Performance</div>
+          <div className="p-6 border rounded-xl">🎨 Modern UI</div>
+          <div className="p-6 border rounded-xl">📱 Fully Responsive</div>
+        </div>
+      </section>
+
+      {/* DEMO */}
+      <section id="demo" className="py-24 px-10 bg-gray-50 text-center">
+        <h2 className="text-4xl font-bold">Live Demo</h2>
+        <p className="mt-4 text-gray-600">Replace this section with screenshots or video</p>
       </section>
 
       {/* PRICING */}
-      <section id="pricing" className="py-20 px-10">
-        <h3 className="text-3xl font-bold text-center mb-12">Pricing Plans</h3>
+      <section id="pricing" className="py-24 px-10">
+        <h2 className="text-4xl font-bold text-center mb-14">Pricing</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="border rounded-xl p-6 text-center">
-            <h4 className="font-bold text-xl">Starter</h4>
+          <div className="p-6 border rounded-2xl text-center">
+            <h3 className="font-bold">Basic</h3>
+            <p className="text-3xl mt-4">$29</p>
+          </div>
+
+          <div className="p-6 border-2 border-black rounded-2xl text-center scale-105">
+            <h3 className="font-bold">Pro</h3>
+            <p className="text-3xl mt-4">$59</p>
+          </div>
+
+          <div className="p-6 border rounded-2xl text-center">
+            <h3 className="font-bold">Premium</h3>
             <p className="text-3xl mt-4">$99</p>
-          </div>
-
-          <div className="border-2 border-black rounded-xl p-6 text-center scale-105">
-            <h4 className="font-bold text-xl">Pro</h4>
-            <p className="text-3xl mt-4">$299</p>
-          </div>
-
-          <div className="border rounded-xl p-6 text-center">
-            <h4 className="font-bold text-xl">Enterprise</h4>
-            <p className="text-3xl mt-4">$599</p>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section id="contact" className="py-24 text-center bg-black text-white">
-        <h3 className="text-4xl font-bold">Ready to grow your business?</h3>
+      <section className="py-28 text-center bg-black text-white">
+        <h2 className="text-4xl font-bold">Start Selling Today</h2>
         <p className="mt-4 text-gray-300">
-          Let’s build something amazing together.
+          Get the template and launch your business instantly.
         </p>
 
-        <button className="mt-8 px-8 py-3 bg-white text-black rounded-full">
-          Contact Us
-        </button>
+        <a
+          href="https://gumroad.com"
+          className="mt-8 inline-block px-8 py-3 bg-white text-black rounded-full"
+        >
+          Buy Template
+        </a>
       </section>
 
       {/* FOOTER */}
-      <footer className="text-center py-6 text-gray-500 text-sm">
-        © {new Date().getFullYear()} AgencyPro. All rights reserved.
+      <footer className="text-center py-6 text-sm text-gray-500">
+        © {new Date().getFullYear()} AgencyX. All rights reserved.
       </footer>
 
     </main>
